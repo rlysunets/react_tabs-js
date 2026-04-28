@@ -19,14 +19,14 @@ export const App = () => {
 
   return (
     <div className="section">
-      <h1 className="title">Selected tab is {findObj.title} </h1>
+      <h1 className="title">Selected tab is {findObj.title}</h1>
 
       <div data-cy="TabsComponent">
-        <Tabs tabs={tabs} setActiveTabId={setActiveTabId} />
-
-        <div className="block" data-cy="TabContent">
-          {findObj.content}
-        </div>
+        <Tabs
+          tabs={tabs}
+          onTabSelected={setActiveTabId}
+          activeTabId={activeTabId}
+        />
       </div>
     </div>
   );
